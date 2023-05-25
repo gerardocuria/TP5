@@ -18,12 +18,13 @@ typedef struct operacion_s {
 
 typedef struct calculadora_s {
     struct operacion_s operaciones [OPERACIONES];
+    //operacion_t operacion;
 };
 
 operacion_t BuscarOperacion(calculadora_t calculadora, char operador) {
     operacion_t resultado = NULL;
     for (int indice = 0; indice < OPERACIONES; indice++){
-    // for(operacion_t actual = calculadora->operaciones; actual->siguiente != NULL;){
+    // for(operacion_t actual = calculadora->operaciones; actual->siguiente != NULL;actual = actual->siguiente){
         if(calculadora->operaciones[indice].operador == operador){
         //if(actual->operador == operador) {
             resultado = &calculadora->operaciones[indice];
@@ -45,6 +46,7 @@ calculadora_t CrearCalculadora(void){
 
 bool AgregarOperacion(calculadora_t calculadora, char operador, funcion_t funcion){
     operacion_t operacion = BuscarOperacion(calculadora, '\0');
+    //operacion_t operacion = malloc(sizeof(struct operacion_s));
 
     if ((operacion) && !BuscarOperacion(calculadora, operador)){
         operacion->operador = operador;
