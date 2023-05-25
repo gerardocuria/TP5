@@ -1,34 +1,40 @@
+#include "Calculadora.h"
+#include <stdlib.h>
+#include <string.h>
+
+
 #ifndef OPERACIONES
 #define OPERACIONES 16
 #endif
 
-//typedef struct operacion_s * operacion_t;
 
-/*struct operacion_s {
+typedef struct operacion_s * operacion_t;
+
+struct operacion_s {
     char operador;
     funcion_t funcion;
     operacion_t siguiente;
-};*/
+};
 
-typedef struct operacion_s {
+/*typedef struct operacion_s {
     char operador;
     funcion_t funcion;
-} * operacion_t;
+} * operacion_t;*/
 
 
-typedef struct calculadora_s {
-    struct operacion_s operaciones [OPERACIONES];
-    //operacion_t operacion;
+struct calculadora_s {
+    //struct operacion_s operaciones [OPERACIONES];              
+    operacion_t operacion;
 };
 
 operacion_t BuscarOperacion(calculadora_t calculadora, char operador) {
     operacion_t resultado = NULL;
     //for (int indice = 0; indice < OPERACIONES; indice++){
-    for(operacion_t actual = calculadora->operaciones; actual->siguiente != NULL;actual = actual->siguiente){
+    for(operacion_t actual = calculadora->operacion; actual->siguiente != NULL;actual = actual->siguiente){
         //if(calculadora->operaciones[indice].operador == operador){
         if(actual->operador == operador) {
-            resultado = &calculadora->operaciones[indice];        //VER!!!!!!!!
-            //resultado = actual;
+            //resultado = &calculadora->operaciones[indice];        //VER!!!!!!!!
+            resultado = actual;
             break;
         }
     }
@@ -51,8 +57,8 @@ bool AgregarOperacion(calculadora_t calculadora, char operador, funcion_t funcio
     if ((operacion) && !BuscarOperacion(calculadora, operador)){                 //VER!!!!!!!!!1
         operacion->operador = operador;
         operacion->funcion = funcion;
-        operacion->siguiente = calculadora->operaciones;
-        calculadora->operaciones = operacion;
+        operacion->siguiente = calculadora->operacion;
+        calculadora->operacion = operacion;
     }
     return (operacion != NULL);
 }
@@ -73,7 +79,7 @@ int Calcular(calculadora_t calculadora, char * cadena){
 
     operacion_t operacion = BuscarOperacion(calculadora, operador);
     if (operacion) {
-        resutado = operacion->funcion(a,b);
+        resultado = operacion->funcion(a,b);
     }
-    return result;
+    return resultado;
 }
