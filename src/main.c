@@ -21,6 +21,6 @@ int main(void){
     AgregarOperacion(calculadora, '-', resta);
     AgregarOperacion(calculadora, '*', producto);
 
-    resultado = Calcular(calculadora, "2*4");
+    resultado = Calcular(calculadora, "4-2");
     printf("Resultado %i\r\n", resultado);
 }

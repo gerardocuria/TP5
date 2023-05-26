@@ -30,7 +30,7 @@ struct calculadora_s {
 operacion_t BuscarOperacion(calculadora_t calculadora, char operador) {
     operacion_t resultado = NULL;
     //for (int indice = 0; indice < OPERACIONES; indice++){
-    for(operacion_t actual = calculadora->operacion; actual->siguiente != NULL;actual = actual->siguiente){
+    for(operacion_t actual = calculadora->operacion; actual != NULL;actual = actual->siguiente){
         //if(calculadora->operaciones[indice].operador == operador){
         if(actual->operador == operador) {
             //resultado = &calculadora->operaciones[indice];        //VER!!!!!!!!
