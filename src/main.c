@@ -13,6 +13,10 @@ int producto(int a,int b){
     return a * b;
 }
 
+int division(int a,int b){
+    return a / b;
+}
+
 int main(void){
     int resultado;
 
@@ -20,7 +24,14 @@ int main(void){
     AgregarOperacion(calculadora, '+', suma);
     AgregarOperacion(calculadora, '-', resta);
     AgregarOperacion(calculadora, '*', producto);
+    AgregarOperacion(calculadora, '/', division);
 
+    resultado = Calcular(calculadora, "4+2");
+    printf("Resultado %i\r\n", resultado);
     resultado = Calcular(calculadora, "4-2");
+    printf("Resultado %i\r\n", resultado);
+    resultado = Calcular(calculadora, "4*2");
+    printf("Resultado %i\r\n", resultado);
+    resultado = Calcular(calculadora, "4/2");
     printf("Resultado %i\r\n", resultado);
 }
