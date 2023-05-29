@@ -1,3 +1,11 @@
+/** 
+* @file main.c
+* @author Gerardo Curia
+* @date Mayo 2023
+* @brief
+**/
+
+
 #include "Calculadora.h"
 #include "stdio.h"
 
@@ -35,3 +43,8 @@ int main(void){
     resultado = Calcular(calculadora, "4/2");
     printf("Resultado %i\r\n", resultado);
 }
+
+
+/* === End of documentation ==================================================================== */
+
+/** @} End of module definition for doxygen */
