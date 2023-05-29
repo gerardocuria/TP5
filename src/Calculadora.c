@@ -11,7 +11,7 @@
 typedef struct operacion_s * operacion_t;
 
 struct operacion_s {
-    char operador;
+    char operador;  
     funcion_t funcion;
     operacion_t siguiente;
 };

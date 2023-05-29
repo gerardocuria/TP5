@@ -121,12 +121,16 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0f953c449ff3fe5b35c50d073329347f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_calculadora_8c.html#ab6aee4990bab09ca3b8f1569d31ddfb1">operacion_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculadora_8c.html#a0f953c449ff3fe5b35c50d073329347f">BuscarOperacion</a> (<a class="el" href="_calculadora_8h.html#a22e8a501f3108fb5d6b9cffbb5cf256f">calculadora_t</a> calculadora, char operador)</td></tr>
+<tr class="memdesc:a0f953c449ff3fe5b35c50d073329347f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion Busca una Operacion.  <br /></td></tr>
 <tr class="separator:a0f953c449ff3fe5b35c50d073329347f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a672586265e01d9054a1692384bb7b9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_calculadora_8h.html#a22e8a501f3108fb5d6b9cffbb5cf256f">calculadora_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculadora_8c.html#a672586265e01d9054a1692384bb7b9d7">CrearCalculadora</a> (void)</td></tr>
+<tr class="memdesc:a672586265e01d9054a1692384bb7b9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion crea calculadora.  <br /></td></tr>
 <tr class="separator:a672586265e01d9054a1692384bb7b9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba519c020d2d4d94b51d0fb24dd9ad11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculadora_8c.html#aba519c020d2d4d94b51d0fb24dd9ad11">AgregarOperacion</a> (<a class="el" href="_calculadora_8h.html#a22e8a501f3108fb5d6b9cffbb5cf256f">calculadora_t</a> calculadora, char operador, <a class="el" href="_calculadora_8h.html#a96a49b38ea76e3b9ec9651039e3ed685">funcion_t</a> funcion)</td></tr>
+<tr class="memdesc:aba519c020d2d4d94b51d0fb24dd9ad11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion agregar operacion.  <br /></td></tr>
 <tr class="separator:aba519c020d2d4d94b51d0fb24dd9ad11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5893d77cd47f5256781cf6cc858e6b74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_calculadora_8c.html#a5893d77cd47f5256781cf6cc858e6b74">Calcular</a> (<a class="el" href="_calculadora_8h.html#a22e8a501f3108fb5d6b9cffbb5cf256f">calculadora_t</a> calculadora, char *cadena)</td></tr>
+<tr class="memdesc:a5893d77cd47f5256781cf6cc858e6b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion Calcular.  <br /></td></tr>
 <tr class="separator:a5893d77cd47f5256781cf6cc858e6b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -192,6 +196,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Funcion agregar operacion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calculadora</td><td></td></tr>
+    <tr><td class="paramname">operador</td><td>signo de la operacion a realizar </td></tr>
+    <tr><td class="paramname">funcion</td><td>funcion para reconocer operacion </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a0f953c449ff3fe5b35c50d073329347f" name="a0f953c449ff3fe5b35c50d073329347f"></a>
@@ -219,6 +234,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Funcion Busca una Operacion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calculadora</td><td></td></tr>
+    <tr><td class="paramname">operador</td><td>signo de la operacion a realizar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -248,6 +273,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Funcion Calcular. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">calculadora</td><td></td></tr>
+    <tr><td class="paramname">cadena</td><td>valores para realizar el calculo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a672586265e01d9054a1692384bb7b9d7" name="a672586265e01d9054a1692384bb7b9d7"></a>
@@ -265,6 +300,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Funcion crea calculadora. </p>
 
 </div>
 </div>
